@@ -17,6 +17,7 @@ body {
 	color: #333;
 	height: 100%;
 	line-height: 1.5em;
+	font-family: $helvetica;
 }
 /*****************************************************************************
   Layout Styles
@@ -64,7 +65,6 @@ header {
 header:hover {
 	background-color: #FFFF00;
 	content: "";
-	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -73,6 +73,16 @@ header:hover {
 	@include linear-gradient( 45deg, yellow, green );
 
 }
+
+main {
+	margin: 0 16.66667%;
+	display: block;
+}
+
+section {
+  padding-top: 5%;
+}
+
 /*****************************************************************************
   Module Styles
 ******************************************************************************/
