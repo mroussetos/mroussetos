@@ -18,6 +18,11 @@ body {
 	height: 100%;
 	line-height: 1.5em;
 	font-family: $helvetica;
+  font-size: 1rem;
+}
+
+a {
+  color: grey;
 }
 /*****************************************************************************
   Layout Styles
@@ -25,16 +30,25 @@ body {
 #navbar {
 	@include transition-duration(0.5s);
 	position: fixed;
-	top: -9em;
+	top: -8em;
 	left: 0px;
 	right: 0px;
-	height: 13em;
+	height: 11em;
 	display: inline;
 	width: 100%;
 	z-index: 1000;
 	&.active {
-    top: 0;
+    top: -100px;
   }
+}
+
+nav {
+font-size: 1.5em;
+padding-top: 8rem;
+}
+
+nav li {
+text-decoration: none;
 }
 
 
@@ -44,9 +58,29 @@ nav:hover {
 
 }
 
+#navbar ul {
+  list-style: none;
+  text-align: center;
+}
+
+#navbar a:hover {
+color: lightgrey;
+@include transition (all 0.2s ease-in-out);
+
+}
+
+#navbar a {
+  text-decoration: none;
+}
+
+#navbar li {
+display: inline;
+padding: 1rem;
+}
+
 
 header {
-	background-color: #333;
+	background-color: #B8B8B8;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -59,7 +93,7 @@ header {
 }
 
 #titlescreen {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 header:hover {
@@ -74,14 +108,56 @@ header:hover {
 
 }
 
+header #skip {
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  height: 1.5rem;
+}
+
+header ul {
+  list-style: none;
+  padding: 1rem;
+}
+
 main {
 	margin: 0 16.66667%;
-	display: block;
 }
 
 section {
   padding-top: 5%;
 }
+
+.work img {
+
+}
+
+footer {
+  background-color: grey;
+  height: 80px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 1em;
+}
+
+
+footer ul {
+  display: inline;
+  margin-left: 10rem;
+}
+
+footer li {
+  display: inline;
+}
+
 
 /*****************************************************************************
   Module Styles
