@@ -23,14 +23,14 @@ body {
 }
 
 a {
-  color: grey;
+  color: #4C4C4C;
 }
 
 /*****************************************************************************
   Layout Styles
 ******************************************************************************/
 #navbar {
-	@include transition-duration(0.2s);
+	@include transition-duration(.25s);
 	position: fixed;
 	top: -8em;
 	left: 0px;
@@ -128,19 +128,18 @@ header ul {
   padding: 1rem;
 }
 
-
-
 main {
 	margin: 0 16.66667%;
 }
 
 section {
-  padding-top: 5%;
-  padding-bottom: 5%;
+padding-top: 5rem;
 }
 
-section a:hover {
-  opacity: 0.8;
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 iframe {
@@ -149,24 +148,28 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
+
 }
 
 .movie {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
-  opacity: 0.8;
 }
 
 .work {
   @include display(flex);
-
 }
 
 .work img {
   width: 100%;
-  padding: 0.5rem;
+  border: 1px;
+  border-style: solid;
+  border-color: lightgrey;
+  display: table;
+  vertical-align: middle;
 }
+
 
 footer {
   background: tint(yellow, 60%);
