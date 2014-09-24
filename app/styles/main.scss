@@ -1,29 +1,48 @@
 /*****************************************************************************
   mroussetos
 ******************************************************************************/
-
-
 @import '../../bower_components/bourbon/dist/_bourbon.scss';
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
-
-
-
-
-
 /*****************************************************************************
   Base Styles
 ******************************************************************************/
 body {
-	color: #333;
-	height: 100%;
-	line-height: 1.5em;
-	font-family: $helvetica;
-  font-size: 1rem;
-  text-align: center;
+height: 100%;
+line-height: 1.3em;
+text-align: center;
 }
 
 a {
-  color: #4C4C4C;
+color: #cccc33;
+}
+
+p {
+margin-top: 0.5em;
+margin-bottom: 1.3em;
+padding-left: 3rem;
+padding-right: 3rem;
+font-family: Times;
+font-size: 1.1rem;
+font-style: italic;
+text-transform: uppercase;
+color: #2C2C2C;
+}
+
+h1 {
+font-family: FuturaPT-Bold;
+text-transform: uppercase;
+font-size: 5em;
+letter-spacing: 10px;
+color: #cccc33;
+}
+
+h2 {
+margin-bottom: 0;
+font-family: FuturaPT-Bold;
+text-transform: uppercase;
+font-size: 2.5rem;
+letter-spacing: 2px;
+color: #2C2C2C;
 }
 
 /*****************************************************************************
@@ -32,7 +51,7 @@ a {
 #navbar {
 	@include transition-duration(.25s);
 	position: fixed;
-	top: -8em;
+	top: -8.5em;
 	left: 0px;
 	right: 0px;
 	height: 12em;
@@ -40,12 +59,16 @@ a {
 	width: 100%;
 	z-index: 1000;
 	&.active {
-    top: -70px;
+    top: -40px;
   }
 }
 
 nav {
-padding-top: 4rem;
+padding-top: 5.5rem;
+font-family: Times;
+font-size: 1.2rem;
+font-style: italic;
+text-transform: uppercase;
 }
 
 nav li {
@@ -54,149 +77,163 @@ text-decoration: none;
 
 
 nav:hover {
-	background: rgba(255, 255, 255, 0.2);
-	cursor: pointer;
-
+background: tint(#cccc33, 80%);
+opacity: 0.8;
+cursor: pointer;
 }
 
 #navbar ul {
-  list-style: none;
-  text-align: center;
+list-style: none;
+text-align: center;
 }
 
 #navbar a:hover {
-color: lightgrey;
+color: #2C2C2C;
 @include transition (all 0.2s ease-in-out);
-
 }
 
 #navbar a {
-  text-decoration: none;
+text-decoration: none;
 }
 
 #navbar li {
 display: inline;
 padding: 1rem;
-
 }
 
 
 header {
-	background-color: #B8B8B8;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 1.5rem;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	@include transition-duration(1s);
+background: tint(#cccc33, 40%);
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 1.5rem;
+overflow: hidden;
+position: relative;
+width: 100%;
+height: 100vh;
+@include transition-duration(1s);
 }
 
 #titlescreen {
-	opacity: 0.8;
+opacity: 0.8;
 }
 
 header:hover {
-	background-color: #FFFF00;
-	content: "";
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	@include transition-duration(1s);
-	@include linear-gradient( 45deg, yellow, green );
-
+content: "";
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+@include transition-duration(1s);
+@include linear-gradient( 45deg, white, white );
 }
 
 header #skip {
-  text-decoration: none;
-  font-size: 2em;
-  color: white;
-  opacity: 0.8;
-  text-align: center;
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0;
-  right: 0;
-  height: 1.5rem;
+text-decoration: none;
+color: white;
+opacity: 0.8;
+text-align: center;
+position: absolute;
+bottom: 1.5rem;
+left: 0;
+right: 0;
+height: 1.5rem;
 }
 
 header ul {
-  list-style: none;
-  padding: 1rem;
+list-style: none;
+padding: 1rem;
+}
+
+hr {
+border-style: solid;
+color: tint(#cccc33, 40%);
 }
 
 main {
-	margin: 0 16.66667%;
+margin: 0 16.66667%;
 }
 
 section {
-padding-top: 5rem;
+padding-top: 4rem;
 }
 
 section ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .movie {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
 }
 
 .work {
-  @include display(flex);
+@include display(flex);
 }
 
 .work img {
-  width: 100%;
-  border: 1px;
-  border-style: solid;
-  border-color: lightgrey;
-  display: table;
-  vertical-align: middle;
+width: 100%;
+display: table-cell;
+padding: 5px;
 }
 
 
 footer {
-  background: tint(yellow, 60%);
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  height: 200px;
-  padding-top: 4em;
-  text-align: center;
+position: absolute;
+width: 100%;
+left: 0;
+right: 0;
+height: 400px;
+padding-top: 7em;
+text-align: center;
+}
+
+footer div {
+display: inline;
+}
+
+footer .copywrite {
+padding-top: 1rem;
+font-size: 0.7rem;
+display: block;
 }
 
 footer a:hover {
 color: lightgrey;
 @include transition (all 0.2s ease-in-out);
+}
+
+footer img {
 
 }
 
+
 footer ul {
-  display: inline;
-  margin-left: auto;
-  margin-right: auto;
+margin-left: auto;
+margin-right: auto;
+display: inline;
 }
 
 footer li {
+display: inline;
+list-style: none;
 }
 
+footer a:hover {
+@include transition (all 0.2s ease-in-out);
+opacity: 0.8;
+}
 
 /*****************************************************************************
   Module Styles
@@ -218,7 +255,7 @@ footer li {
   border-radius: 0px;
   height: 3px;
   width: 25px;
-  background: white;
+  background: #cccc33;
   position: absolute;
   display: block;
   content: '';
