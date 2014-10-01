@@ -22,12 +22,13 @@
     <!-- endbuild -->
 
     <!-- This script below is for instagram -->
+    <script src="scripts/instafeed.min.js"></script>
 
     <script type="text/javascript">
     var userFeed = new Instafeed({
         get: 'user',
         limit: "1",
-        resolution: "low_resolution",
+        resolution: "standard_resolution",
         userId: 30743102,
         accessToken: '30743102.467ede5.5fa50258399f40d19b1f1933ceaf2d6e'
     });
@@ -349,11 +350,7 @@
 
 <hr>
 
-<div>
-<div id="instafeed">
-</div>
-
-<img src="http://placehold.it/640x640">
+<div id="instafeed" class="feed"></div>
 
 
 </section>
@@ -399,7 +396,6 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/jquery.fluidbox.min.js"></script>
     <script src="scripts/fluidbox.js"></script>
-    <script src="scripts/instafeed.min.js"></script>
     <!-- endbuild -->
   </body>
 </html>
