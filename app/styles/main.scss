@@ -75,7 +75,6 @@ nav li {
 text-decoration: none;
 }
 
-
 nav:hover {
 background: tint(#cccc33, 80%);
 opacity: 1;
@@ -100,7 +99,6 @@ text-decoration: none;
 display: inline;
 padding: 1rem;
 }
-
 
 header {
 display: flex;
@@ -146,10 +144,19 @@ margin: 0;
 padding: 0;
 }
 
-iframe {
+.wrapper {
+position: relative;
+padding-bottom: 56.25%; /* 16:9 */
+padding-top: 25px;
+height: 0;
+}
+
+.wrapper iframe {
+position: absolute;
 top: 0;
 left: 0;
 width: 100%;
+height: 100%;
 }
 
 .work {
@@ -176,10 +183,6 @@ padding-top: 7em;
 text-align: center;
 }
 
-footer div {
-
-}
-
 footer .copywrite {
 padding-top: 1rem;
 font-size: 0.7rem;
@@ -190,11 +193,6 @@ footer a:hover {
 color: lightgrey;
 @include transition (all 0.2s ease-in-out);
 }
-
-footer img {
-
-}
-
 
 footer ul {
 margin-left: auto;
@@ -213,31 +211,28 @@ opacity: 0.8;
 }
 
 .copywrite {
-  height: 75px;
+height: 75px;
 }
 
 /*****************************************************************************
   Media Queries
 ******************************************************************************/
-
+/*
 @media (max-width: 480px) {
 
 header {
-padding-top: 2rem;
+padding-top: 10rem;
 padding-bottom: 0rem;
-align-items: center;
 height: 100px;
-
 }
 
 section {
-  padding-top: 0rem;
+padding-top: 0rem;
 }
 
 h1 {
 font-family: FuturaPT-Bold;
 text-transform: uppercase;
-font-size: 3rem;
 letter-spacing: 5px;
 color: #cccc33;
 }
@@ -248,7 +243,7 @@ margin-bottom: 0.5em;
 padding-left: 0rem;
 padding-right: 0rem;
 font-family: Times;
-font-size: 1rem;
+font-size: 2rem;
 font-style: italic;
 text-transform: uppercase;
 color: #2C2C2C;
@@ -256,18 +251,16 @@ color: #2C2C2C;
 
 nav {
 padding-top: 0.75rem;
-
 }
 
 #navbar {
-  display: none;
-  @include transition-duration(.25s);
-  position: fixed;
-
+display: none;
+@include transition-duration(.25s);
+position: fixed;
 }
 
 header ul {
-  display: none;
+display: none;
 list-style: none;
 padding: 0rem;
 }
@@ -284,7 +277,7 @@ line-height: 0.75em;
 }
 
 footer {
-  padding-top: 0rem;
+padding-top: 0rem;
 }
 
 footer img {
@@ -292,12 +285,14 @@ width: 30%;
 }
 
 .copywrite {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-bottom: 2rem;
+padding-left: 5rem;
+padding-right: 5rem;
+padding-bottom: 2rem;
 }
 
 }
+
+*/
 
 @media (max-width: 1024px) {
 
@@ -310,14 +305,14 @@ height: 100px;
 }
 
 section {
-  padding-top: 0rem;
+padding-top: 0rem;
 }
 
 h1 {
 font-family: FuturaPT-Bold;
 text-transform: uppercase;
-font-size: 3rem;
-letter-spacing: 5px;
+font-size: 2.5rem;
+letter-spacing: 2px;
 color: #cccc33;
 }
 
@@ -327,26 +322,25 @@ margin-bottom: 0.5em;
 padding-left: 0rem;
 padding-right: 0rem;
 font-family: Times;
-font-size: 1rem;
+font-size: 0.8rem;
 font-style: italic;
 text-transform: uppercase;
 color: #2C2C2C;
+line-height: 0.9rem;
 }
 
 nav {
 padding-top: 0.75rem;
-
 }
 
 #navbar {
-  display: none;
-  @include transition-duration(.25s);
-  position: fixed;
-
+display: none;
+@include transition-duration(.25s);
+position: fixed;
 }
 
 header ul {
-  display: none;
+display: none;
 list-style: none;
 padding: 0rem;
 }
@@ -360,10 +354,11 @@ text-align: center;
 h2 {
 letter-spacing: 0px;
 line-height: 0.75em;
+font-size: 1.7rem;
 }
 
 footer {
-  padding-top: 0rem;
+padding-top: 0rem;
 }
 
 footer img {
@@ -371,9 +366,9 @@ width: 20%;
 }
 
 .copywrite {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-bottom: 2rem;
+padding-left: 5rem;
+padding-right: 5rem;
+padding-bottom: 2rem;
 }
 
 }
